@@ -1,0 +1,23 @@
+ .task-disc {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 50px
+  }
+  
+  .task-disc p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .task-disc p:first-child {
+    font-weight: bold;
+  }
+  
+  .task-disc p:last-child {
+    font-style: italic;
+  }
+  

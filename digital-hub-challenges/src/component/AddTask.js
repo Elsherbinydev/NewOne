@@ -1,4 +1,5 @@
 import React from "react";
+import './AddTask.css'
 import { useState } from "react";
 
 const AddNewTask = ({ addTasks }) => {
@@ -12,7 +13,7 @@ const AddNewTask = ({ addTasks }) => {
     setStatus("NoT-Started-Yet");
   };
   return (
-    <form onSubmit={handleSubmission}>
+    <form className="form" onSubmit={handleSubmission}>
       <input
         type="text"
         value={description}
@@ -23,9 +24,10 @@ const AddNewTask = ({ addTasks }) => {
         value={status}
         onChange={(event) => setStatus(event.target.value)}
       >
-        <option value="NoT-Started"> NoT Started </option>
-        <option value="On-Progress"> On Progress </option>
-        <option value="Finished"> Finished </option>
+        
+        <option value="Not Started"> NoT Started </option>
+        <option value="In Progress"> On Progress </option>
+        <option value="finished"> Finished </option>
       </select>
 
       <button type="submit"> Add-Task </button>

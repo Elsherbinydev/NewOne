@@ -7,15 +7,17 @@ import './App.css';
 const App = () => {
 
   const [tasks,setTasks] = useState([])
-  const addTask = (task) => {
-    setTasks([...tasks,task])
-  }
+  const addTask = (description, status) => {
+    // Logic to add a new task
+    const newTask = { description, status };
+    setTasks([...tasks, newTask]);
+  };
   const deleteTask = (id) =>
   {setTasks(tasks.filter((task)=>task.id !== id))}
   return (
     <div className="App">
       
-    <AddNewTask addTask = {addTask} />
+    <AddNewTask  addTasks = {addTask} />
     <TaskList tasks= {tasks} deleteTask ={deleteTask} />
     </div>
   );

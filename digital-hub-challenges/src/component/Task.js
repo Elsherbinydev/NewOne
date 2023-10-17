@@ -1,19 +1,19 @@
 import React from "react";
+import './Task.css';
 
-const TaskDisc = ({description,status}) =>{
-const statusColors = {
-    'Not Started' : 'red',
-    'In Progress' : 'orange',
-    'finished' : 'green',
-};
-return (
+const TaskDisc = ({description, status}) => {
+  const statusColors = {
+    'Not Started': 'red',
+    'In Progress': 'orange',
+    'finished': 'green',
+  };
 
-    <div style={{backgroundColor: statusColors[status]}}>
-    <p>{description}</p>
-    <p>{status}</p> 
+  return (
+    <div className="task-disc" style={{backgroundColor: statusColors[status] || 'gray'}}>
+      <p>{description}</p>
+      <p>{status}</p> 
     </div>
-)
+  )
+}
 
- }
-
- export default TaskDisc;
+export default TaskDisc;

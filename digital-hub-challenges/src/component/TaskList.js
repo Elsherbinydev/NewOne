@@ -4,8 +4,8 @@ import Task from './Task';
 const TaskList = ({ tasks, deleteTask }) => {
   return (
     <div>
-      {tasks.map((task) => (
-        <Task key={task.id} {...task} deleteTask={deleteTask} />
+      {tasks.map((task ,id) => (
+        <Task key={id} {...task} deleteTask={deleteTask} />
       ))}
     </div>
   );
