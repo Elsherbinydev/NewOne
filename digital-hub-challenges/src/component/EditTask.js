@@ -14,7 +14,7 @@ const EditTask = ({ task, updateTasks }) => {
   return (
     <form onSubmit={handleSubmission}>
       <input
-        type="test"
+        type="text"
         value={description}
         onChange={(event) => setDescription(event.target.value)}
       />
@@ -24,9 +24,10 @@ const EditTask = ({ task, updateTasks }) => {
       >
         <option value="NoT-Started"> NoT Started </option>
         <option value="On-Progress"> On Progress </option>
-        <option value="NoT-Started"> Finished </option>
+        <option value="Finished"> Finished </option>
       </select>
-      <button type="submit" > Update-Task </button>
+
+      <button type="submit"> Update-Task </button>
     </form>
   );
 };
